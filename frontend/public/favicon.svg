@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <!-- Vintage brown gradient -->
+    <linearGradient id="brownGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#92400e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#78350f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#92400e;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Gold gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#eab308;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ca8a04;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Cream background -->
+    <linearGradient id="creamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fffbeb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fef3c7;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Sky gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle - vintage leather look -->
+  <circle cx="50" cy="50" r="48" fill="url(#brownGrad)" stroke="#b45309" stroke-width="3"/>
+
+  <!-- Inner cream circle -->
+  <circle cx="50" cy="50" r="40" fill="url(#creamGrad)" stroke="#ca8a04" stroke-width="2"/>
+
+  <!-- Propeller hub -->
+  <circle cx="50" cy="50" r="8" fill="url(#brownGrad)" stroke="#ca8a04" stroke-width="1"/>
+  <circle cx="50" cy="50" r="4" fill="url(#goldGrad)"/>
+
+  <!-- Propeller blade 1 (top-right) -->
+  <ellipse cx="50" cy="30" rx="6" ry="18" fill="url(#brownGrad)" stroke="#ca8a04" stroke-width="1" transform="rotate(45, 50, 50)"/>
+
+  <!-- Propeller blade 2 (bottom-left) -->
+  <ellipse cx="50" cy="70" rx="6" ry="18" fill="url(#brownGrad)" stroke="#ca8a04" stroke-width="1" transform="rotate(45, 50, 50)"/>
+
+  <!-- Propeller blade 3 (top-left) -->
+  <ellipse cx="30" cy="50" rx="18" ry="6" fill="url(#brownGrad)" stroke="#ca8a04" stroke-width="1" transform="rotate(45, 50, 50)"/>
+
+  <!-- Propeller blade 4 (bottom-right) -->
+  <ellipse cx="70" cy="50" rx="18" ry="6" fill="url(#brownGrad)" stroke="#ca8a04" stroke-width="1" transform="rotate(45, 50, 50)"/>
+
+  <!-- Small vintage airplane silhouette at bottom -->
+  <g transform="translate(50, 75) scale(0.4)">
+    <!-- Fuselage -->
+    <ellipse cx="0" cy="0" rx="20" ry="5" fill="url(#skyGrad)"/>
+    <!-- Wings -->
+    <rect x="-25" y="-2" width="50" height="4" fill="url(#skyGrad)" rx="1"/>
+    <!-- Tail -->
+    <polygon points="18,-1 25,0 18,1" fill="url(#skyGrad)"/>
+    <polygon points="18,-4 18,0 22,0" fill="url(#skyGrad)"/>
+  </g>
+
+  <!-- Compass direction markers -->
+  <text x="50" y="18" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#92400e" font-weight="bold">N</text>
+  <text x="50" y="92" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#92400e" font-weight="bold">S</text>
+  <text x="10" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#92400e" font-weight="bold">W</text>
+  <text x="90" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#92400e" font-weight="bold">E</text>
+</svg>

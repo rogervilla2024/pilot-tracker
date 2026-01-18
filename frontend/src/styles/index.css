@@ -1,0 +1,305 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Custom Base Styles ===== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-pilot-cream text-pilot-dark font-body antialiased;
+    background-image:
+      radial-gradient(circle at 20% 80%, rgba(146, 64, 14, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.03) 0%, transparent 50%);
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight;
+  }
+
+  /* Custom scrollbar - vintage leather look */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-pilot-cream-dark rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-pilot-brown rounded-full;
+    border: 2px solid #fef3c7;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-pilot-dark;
+  }
+}
+
+/* ===== Component Styles ===== */
+@layer components {
+  /* Vintage Card Style */
+  .card-vintage {
+    @apply bg-pilot-cream-light border-2 border-pilot-tan/30 rounded-vintage shadow-vintage;
+    background-image:
+      linear-gradient(135deg, rgba(254, 243, 199, 0.9) 0%, rgba(253, 230, 138, 0.5) 100%);
+  }
+
+  .card-vintage:hover {
+    @apply shadow-vintage-lg border-pilot-tan/50;
+  }
+
+  /* Leather Panel */
+  .panel-leather {
+    @apply bg-pilot-dark text-pilot-cream rounded-vintage shadow-vintage-lg;
+    background-image:
+      linear-gradient(135deg, #92400e 0%, #78350f 50%, #92400e 100%);
+    border: 3px solid #b45309;
+  }
+
+  /* Brass Button */
+  .btn-brass {
+    @apply px-6 py-2 bg-brass-gradient text-pilot-leather font-semibold rounded-vintage;
+    @apply border-2 border-pilot-gold shadow-vintage;
+    @apply hover:shadow-glow-gold transition-all duration-300;
+    @apply active:scale-95;
+  }
+
+  /* Sky Button */
+  .btn-sky {
+    @apply px-6 py-2 bg-sky-gradient text-white font-semibold rounded-vintage;
+    @apply border-2 border-pilot-sky-light shadow-vintage;
+    @apply hover:shadow-glow-sky transition-all duration-300;
+    @apply active:scale-95;
+  }
+
+  /* Vintage Badge */
+  .badge-vintage {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold;
+    @apply border-2 shadow-vintage-inner;
+  }
+
+  /* Flight Type Badges */
+  .badge-emergency {
+    @apply badge-vintage bg-red-100 text-red-800 border-red-300;
+  }
+
+  .badge-short {
+    @apply badge-vintage bg-orange-100 text-orange-800 border-orange-300;
+  }
+
+  .badge-domestic {
+    @apply badge-vintage bg-yellow-100 text-yellow-800 border-yellow-300;
+  }
+
+  .badge-international {
+    @apply badge-vintage bg-green-100 text-green-800 border-green-300;
+  }
+
+  .badge-transatlantic {
+    @apply badge-vintage bg-blue-100 text-blue-800 border-blue-300;
+  }
+
+  .badge-around-world {
+    @apply badge-vintage bg-purple-100 text-purple-800 border-purple-300;
+  }
+
+  .badge-moon {
+    @apply badge-vintage bg-gradient-to-r from-yellow-200 to-amber-300 text-amber-900 border-amber-400;
+    @apply animate-pulse-slow;
+  }
+
+  /* Gauge Container */
+  .gauge-container {
+    @apply relative p-4 bg-pilot-leather rounded-full border-4 border-pilot-copper;
+    @apply shadow-vintage-lg;
+    background-image:
+      radial-gradient(circle, #92400e 0%, #78350f 70%, #451a03 100%);
+  }
+
+  /* Compass Rose */
+  .compass-rose {
+    @apply relative w-24 h-24;
+  }
+
+  .compass-needle {
+    @apply absolute top-1/2 left-1/2 w-2 h-12 -mt-10 -ml-1;
+    @apply bg-gradient-to-b from-red-500 to-red-700 rounded-full;
+    @apply origin-bottom animate-compass;
+  }
+
+  /* Propeller Animation */
+  .propeller {
+    @apply animate-propeller;
+  }
+
+  /* Vintage Divider */
+  .divider-vintage {
+    @apply relative my-8 h-px bg-gradient-to-r from-transparent via-pilot-tan to-transparent;
+  }
+
+  .divider-vintage::after {
+    content: '';
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    @apply w-8 h-8 bg-pilot-cream border-2 border-pilot-tan rounded-full;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ca8a04'%3E%3Cpath d='M12 2L12 22M2 12L22 12' stroke='%23ca8a04' stroke-width='2'/%3E%3C/svg%3E");
+    background-size: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Stats Display */
+  .stat-display {
+    @apply text-center p-4 bg-pilot-cream-dark/50 rounded-vintage border border-pilot-tan/20;
+  }
+
+  .stat-value {
+    @apply text-3xl font-display font-bold text-pilot-dark;
+    text-shadow: 1px 1px 2px rgba(120, 53, 15, 0.2);
+  }
+
+  .stat-label {
+    @apply text-sm text-pilot-brown uppercase tracking-wider mt-1;
+  }
+
+  /* Flight Log Entry */
+  .flight-log-entry {
+    @apply flex items-center justify-between p-3 bg-pilot-cream/80;
+    @apply border-b border-pilot-tan/20 last:border-b-0;
+    @apply hover:bg-pilot-cream-dark/50 transition-colors duration-200;
+  }
+
+  /* Altimeter Display */
+  .altimeter {
+    @apply relative w-32 h-32 rounded-full bg-pilot-leather;
+    @apply border-4 border-pilot-copper shadow-vintage-lg;
+    background-image:
+      radial-gradient(circle, #1a1a1a 0%, #0a0a0a 100%);
+  }
+
+  .altimeter-face {
+    @apply absolute inset-2 rounded-full bg-pilot-cream-light;
+    @apply border-2 border-pilot-tan;
+    background-image:
+      radial-gradient(circle, #fffbeb 0%, #fef3c7 100%);
+  }
+
+  /* Retro Input */
+  .input-vintage {
+    @apply w-full px-4 py-2 bg-pilot-cream-light border-2 border-pilot-tan/30;
+    @apply rounded-vintage shadow-vintage-inner;
+    @apply focus:outline-none focus:border-pilot-gold focus:ring-2 focus:ring-pilot-gold/20;
+    @apply placeholder:text-pilot-brown/50;
+  }
+
+  /* Warning Banner */
+  .warning-banner {
+    @apply bg-red-900/90 text-white py-2 px-4 text-center text-sm;
+    @apply border-y-2 border-red-700;
+  }
+
+  /* Disclaimer Box */
+  .disclaimer-box {
+    @apply bg-pilot-cream-dark/50 border-2 border-pilot-tan/30 rounded-vintage p-4;
+    @apply text-sm text-pilot-brown;
+  }
+}
+
+/* ===== Utility Styles ===== */
+@layer utilities {
+  /* Text Shadows */
+  .text-shadow-vintage {
+    text-shadow: 2px 2px 4px rgba(120, 53, 15, 0.3);
+  }
+
+  .text-shadow-glow {
+    text-shadow: 0 0 10px rgba(217, 119, 6, 0.5);
+  }
+
+  /* Sepia Effect */
+  .sepia-light {
+    filter: sepia(0.1);
+  }
+
+  /* Paper Texture */
+  .texture-paper {
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  /* Vintage Border */
+  .border-vintage {
+    border-image: linear-gradient(135deg, #ca8a04, #92400e, #ca8a04) 1;
+  }
+
+  /* Flight Path Animation */
+  .flight-path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawPath 2s ease-in-out forwards;
+  }
+
+  @keyframes drawPath {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  /* Multiplier Colors */
+  .multiplier-emergency { @apply text-red-600; }
+  .multiplier-short { @apply text-orange-600; }
+  .multiplier-domestic { @apply text-yellow-600; }
+  .multiplier-international { @apply text-green-600; }
+  .multiplier-transatlantic { @apply text-blue-600; }
+  .multiplier-around-world { @apply text-purple-600; }
+  .multiplier-moon { @apply text-amber-500 font-bold animate-pulse; }
+
+  /* Fade In Animation */
+  .fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  /* Slide Up Animation */
+  .slide-up {
+    animation: slideUp 0.3s ease-out forwards;
+  }
+
+  /* Staggered Animation */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+}
+
+/* ===== Print Styles ===== */
+@media print {
+  body {
+    @apply bg-white text-black;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .card-vintage,
+  .panel-leather {
+    @apply border-gray-300 shadow-none;
+    background: white !important;
+  }
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
