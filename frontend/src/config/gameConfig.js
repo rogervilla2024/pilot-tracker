@@ -13,7 +13,7 @@ export const GAME_CONFIG = {
   name: 'Pilot',
   provider: 'Gamzix',
   providerWebsite: 'https://gamzix.com',
-  domain: 'pilottracker.com',
+  domain: 'pilotgametracker.com',
   rtp: 97.0,
   houseEdge: 3.0,
   maxMultiplier: 10000,
@@ -31,7 +31,7 @@ export const GAME_CONFIG = {
   },
 
   seo: {
-    title: 'Pilot Tracker - Live Pilot Game Statistics & Flight Analytics',
+    title: 'Pilot Game Tracker - Live Pilot Game Statistics & Flight Analytics',
     description: 'Real-time Pilot crash game statistics by Gamzix. Track flight multipliers up to 10,000x with 97% RTP.',
     keywords: ['pilot game', 'gamzix pilot', 'pilot crash game', 'pilot tracker', 'pilot statistics'],
   },
@@ -233,7 +233,7 @@ export const RESPONSIBLE_GAMBLING = {
  * Disclaimer Text
  */
 export const DISCLAIMER = {
-  affiliation: 'Pilot Tracker is an independent statistics tracking website. We are NOT affiliated with, endorsed by, or connected to Gamzix or any casino operator.',
+  affiliation: 'Pilot Game Tracker is an independent statistics tracking website. We are NOT affiliated with, endorsed by, or connected to Gamzix or any casino operator.',
   educational: 'This website is for educational and entertainment purposes only. We do not encourage gambling.',
   noGuarantee: 'Past statistics do not guarantee future results. The game uses a Random Number Generator (RNG) and each round is independent.',
   gamblersFallacy: "Remember: Past results do not predict future outcomes. Each flight is independent. This is known as the Gambler's Fallacy.",
@@ -244,10 +244,10 @@ export const DISCLAIMER = {
  * Contact Information
  */
 export const CONTACT = {
-  general: 'contact@pilottracker.com',
-  business: 'business@pilottracker.com',
-  legal: 'legal@pilottracker.com',
-  privacy: 'privacy@pilottracker.com',
+  general: 'contact@pilotgametracker.com',
+  business: 'business@pilotgametracker.com',
+  legal: 'legal@pilotgametracker.com',
+  privacy: 'privacy@pilotgametracker.com',
 };
 
 export default GAME_CONFIG;

@@ -171,6 +171,25 @@ function HomePage() {
         </div>
       </div>
 
+      {/* About Game Section */}
+      <div className="card-vintage p-6 mb-8">
+        <h2 className="text-xl font-display font-semibold text-pilot-dark mb-4 flex items-center gap-2">
+          <Plane className="w-5 h-5 text-pilot-gold" />
+          What is Pilot?
+        </h2>
+        <div className="space-y-4 text-sm text-pilot-brown">
+          <p>Pilot is Gamzix's premium crash game that brings high production values and polished visuals to the genre. Released in 2023, Pilot targets players who appreciate aesthetic refinement alongside solid gameplay mechanics. The game features a beautifully animated vintage aircraft ascending through stylized skies, with smooth graphics that set it apart from competitors.</p>
+          <p>The gameplay follows the established crash formula: place your bet, watch the plane climb with an increasing multiplier, and decide when to cash out before it crashes. What distinguishes Pilot is its attention to detail - from the vintage aviator theme with brass instruments and leather textures to the satisfying sound design that enhances the tension of each flight.</p>
+          <p>Gamzix engineered Pilot with a competitive 97% RTP, placing it among the fairest crash games available. The maximum multiplier reaches 10,000x for those lucky enough to ride extended flights. The flight type classification system (from "Emergency Landing" to "Moon Flight") adds vocabulary and personality to different multiplier ranges.</p>
+          <p>Despite its polished presentation, Pilot operates on the same mathematical principles as all crash games. Each round uses cryptographic random number generation, making every flight independent. No strategy, timing, or pattern recognition can overcome the 3% house edge. Enjoy the vintage aesthetics, but keep your feet on the ground with responsible bankroll management.</p>
+        </div>
+        <div className="mt-4 pt-4 border-t border-pilot-tan/50 flex flex-wrap gap-2">
+          <span className="px-3 py-1 bg-pilot-cream-dark/50 rounded-full text-xs text-pilot-brown">RTP: 97%</span>
+          <span className="px-3 py-1 bg-pilot-cream-dark/50 rounded-full text-xs text-pilot-brown">Provider: Gamzix</span>
+          <span className="px-3 py-1 bg-pilot-cream-dark/50 rounded-full text-xs text-pilot-brown">Max: 10,000x</span>
+        </div>
+      </div>
+
       {/* Main Stats Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
         {/* Total Flights */}
